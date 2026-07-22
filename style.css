@@ -1,0 +1,873 @@
+@font-face {
+    font-family: hvl;
+    src: url(./fonts/havelock.otf);
+}
+
+@font-face {
+    font-family: atl;
+    src: url(./fonts/attila.ttf);
+}
+
+@font-face {
+    font-family: dnc;
+    src: url(./fonts/DancingScript-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: rog;
+    src: url(./fonts/RougeScript-Regular.ttf);
+}
+
+@font-face {
+    font-family: jost;
+    src: url(./fonts/Jost-Italic-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    /* font-family: montserrat; */
+
+}
+
+#main {
+    width: 100%;
+    height: 1200vh;
+    /* background-color: red; */
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+.circle-hub {
+    width: 100%;
+    height: 620vh;
+    background-color: #F6F6F6;
+   
+}
+
+.content {
+    width: 100%;
+    height: 1200vh;
+    /* background-color: rgba(250, 128, 114, 0.486); */
+    position: absolute;
+    top: 0%;
+}
+
+.hero {
+    width: 100%;
+    height: 95vh;
+    position: relative;
+    /* background-color: red; */
+}
+
+.nav {
+    width: 100%;
+    height: 10vh;
+    background-color: transparent;
+    padding: 0vw 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: montserrat;
+}
+
+.nav h3 {
+    font-weight: 500;
+    font-size: 1.2vw;
+}
+
+.hero-img-top {
+    width: 12vw;
+    height: 14vw;
+    background-color: black;
+    position: absolute;
+    top: 0%;
+    left: 18vw;
+    background-size: cover;
+    background-position: 70% 0%;
+    background-image: url(./assets/res1bed/Bedroom\(4\).webp);
+}
+
+.hero-img-mid {
+    width: 22vw;
+    height: 24vw;
+    background-color: black;
+    position: absolute;
+    top: 24%;
+    right: 1vw;
+    background-size: cover;
+    background-position: center;
+    background-image: url(./assets/res1kitch/kitchen\(6\).webp);
+}
+
+.hero-img-bot {
+    width: 47vw;
+    height: 16vw;
+    background-color: black;
+    position: absolute;
+    bottom: 0%;
+    left: 2vw;
+    background-size: cover;
+    background-position: center;
+    background-image: url(./assets/parlour/proj.webp);
+}
+
+.tag {
+    width: 16vw;
+    height: 5vw;
+    background-color: transparent;
+    top: 14vw;
+    left: 55%;
+    position: absolute;
+    background-image: url(./assets/elements/int\ image.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.jasmine-circle {
+    width: 7.5vw;
+    height: 7.5vw;
+    background-color: #EBE3CF;
+    border-radius: 50%;
+    left: 14%;
+    top: 20vh;
+    position: absolute;
+
+
+}
+
+.grey-circle {
+    width: 7.5vw;
+    height: 7.5vw;
+    background-color: #EAEAEA;
+    border-radius: 50%;
+    left: 84%;
+    top: 63vh;
+    position: absolute;
+
+
+}
+
+.sage-circle {
+    width: 7.5vw;
+    height: 7.5vw;
+    background-color: #E5EEE4;
+    border-radius: 50%;
+    left: 45%;
+    top: 76vh;
+    position: absolute;
+
+
+}
+
+.ignore {
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+}
+
+.information {
+    width: 100%;
+    height: 120vh;
+    /* background-color: green; */
+    position: relative;
+}
+
+.poster {
+    width: 26vw;
+    position: absolute;
+    height: 34vw;
+
+    /* background-color: red; */
+    z-index: 4;
+    top: 20vh;
+    left: 20vw;
+    background-image: url(./assets/res1kids/kids\ room\ desk\ corner.webp);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.poster-small {
+    width: 12vw;
+    height: 32vh;
+    /* background-color: red; */
+    position: absolute;
+    top: 80vh;
+    left: 22vh;
+    z-index: 4;
+    background-image: url(./assets/res1livin/living8.webp);
+    background-position: 30% 10%;
+    background-size: cover;
+}
+
+.detail-txt {
+    width: 30vw;
+    height: 75vh;
+    /* background-color: #e09e9e; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: montserrat;
+    gap: 1vw;
+    position: absolute;
+    right: 8%;
+    top: 20vh;
+
+}
+
+.detail-txt h1 {
+    font-weight: 400;
+    width: 50%;
+    text-transform: uppercase;
+    font-size: 4vw;
+    letter-spacing: -5px;
+    color: rgb(60, 60, 60);
+    line-height: 3.7vw;
+}
+
+.detail-txt p {
+    width: 16vw;
+    font-size: 0.8vw;
+    margin-left: 5px;
+    line-height: 1.5vw;
+}
+
+.design {
+    margin-top: 5.2vw;
+}
+
+.style-txt-box {
+    width: 120%;
+    height: 9vh;
+    /* background-color: rebeccapurple; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-style: italic;
+    color: rgb(202, 177, 147);
+    font-size: 4.3vw;
+    font-family: rog;
+    gap: 5px;
+    position: absolute;
+    right: -100%;
+    top: 41vh;
+
+}
+
+.style-txt-box h2 {
+    font-weight: 300;
+}
+
+.showcase {
+    width: 100%;
+    position: relative;
+    /* background-color: salmon; */
+}
+
+.ribon-head {
+    width: 100%;
+    height: 15vh;
+    position: relative;
+    border-top: 2px solid #CAB193;
+    border-bottom: 2px solid #CAB193;
+    /* background-color: red; */
+
+}
+
+.ribon {
+    position: absolute;
+    height: 100%;
+    left: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 1.5vw;
+}
+
+.ribon-elem {
+    /* width: ; */
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+
+}
+
+.ribon-elem h1 {
+    font-style: italic;
+    font-size: 4vw;
+    font-weight: 300;
+    color: rgb(202, 177, 147);
+    white-space: nowrap;
+}
+
+.ribon-img {
+    width: 8vw;
+    height: 4vw;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    /* background-color: seagreen; */
+}
+
+.visualimg {
+    background-image: url(./assets/res1bed/Bedroom\(3\).webp);
+}
+
+.intdesignimg {
+    background-image: url(./assets/res1livin/living7.webp);
+}
+
+.modelingimg {
+    background-image: url(./assets/res1dining/dinig2.webp);
+}
+
+.first-block {
+    width: 27.5vw;
+    height: 29.4vw;
+    background-color: transparent;
+
+    position: absolute;
+    left: 50%;
+    top: 40vh;
+    z-index: 12;
+
+}
+
+.block-img-first {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    background-image: url(./assets/res1bed/Bedroom\(4\).webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.block-detail {
+    width: 100%;
+    height: 10%;
+    background-color: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 80px;
+    color: #3C3C3C;
+}
+
+.block-detail-next {
+    width: 100%;
+    height: 10%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.block-detail h2 {
+    font-family: montserrat;
+    font-size: .8vw;
+    font-weight: 500;
+    margin-left: 3px;
+
+
+}
+
+.block-detail h3 {
+    font-family: montserrat;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: .7vw;
+}
+
+.block-detail-next h3 {
+    font-family: montserrat;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: .7vw;
+    color: #3C3C3C;
+
+}
+
+.second-block {
+    width: 39.8vw;
+    height: 25vw;
+    background-color: transparent;
+
+    position: absolute;
+    left: 10%;
+    top: 105vh;
+    z-index: 12;
+}
+
+.block-img-second {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    background-image: url(./assets/boho/bohorestaurant\(10\).webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.third-block {
+    width: 39.8vw;
+    height: 33.5vw;
+    background-color: transparent;
+
+    position: absolute;
+    left: 35.7%;
+    top: 175vh;
+    z-index: 12;
+}
+
+.block-img-third {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    background-image: url(./assets/res1kitch/kitchen\(4\).webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.fourth-block {
+    width: 26vw;
+    height: 38vw;
+    background-color: transparent;
+
+    position: absolute;
+    left: 9.5%;
+    top: 240vh;
+    z-index: 12;
+
+}
+
+.block-img-fourth {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    background-image: url(./assets/boxroom/boxroom\ \(2\)\ reimagined\ \(1\).webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.fifth-block {
+    width: 28vw;
+    height: 25vw;
+    background-color: transparent;
+
+    position: absolute;
+    left: 63%;
+    top: 280vh;
+    z-index: 12;
+}
+
+.block-img-fifth {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    background-image: url(./assets/parlour/parlour.jpg\ imagined.webp);
+    background-position: center;
+    background-size: cover;
+}
+.topmail{
+    display: block;
+}
+
+@media (max-width: 505px) {
+   
+
+    .hero-img-top {
+        width: 33vw;
+        height: 40vw;
+        background-color: bisque;
+        position: absolute;
+        top: 0%;
+        left: 37%;
+    }
+
+    .nav h3[topmail] {
+        display: none !important;
+    }
+
+    .hero-img-mid {
+        width: 40vw;
+        height: 40vw;
+        background-color: bisque;
+        position: absolute;
+        top: 70vw;
+        right: 1%;
+
+    }
+
+    .hero-img-bot {
+        width: 60vw;
+        height: 28vw;
+        background-color: bisque;
+        position: absolute;
+        bottom: 0%;
+        left: 2%;
+    }
+    .tag{
+        width: 30vw;
+        height: 9vh;
+        top: 25%;
+    }
+    #ntxt {
+    
+    
+    font-size: 4.2vw;
+    display: inline-block;
+    position: absolute;
+    left: 11%;
+    top: 43%;
+}
+
+#ntxt h1 {
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: #3C3C3C;
+}
+#ntxt2 {
+  
+
+   
+    /* background-color: red; */
+   
+    position: absolute;
+    left: 11%;
+    top: 48%;
+    color: #3C3C3C;
+
+}
+.grey-circle{
+    width: 17.5vw;
+    height: 17.5vw;
+    background-color: #EAEAEA;
+    border-radius: 50%;
+    left: 70%;
+    top: 100vw;
+}
+#tc{
+    width: 17.5vw;
+    height: 17.5vw;
+    background-color: #EAEAEA;
+    border-radius: 50%;
+    left: 70%;
+    top: 100vw;
+}
+.sage-circle{
+    width: 17.5vw;
+    height: 17.5vw;
+    background-color: #E5EEE4;;
+    border-radius: 50%;
+    left: 54vw;
+    top: 80vh;
+}
+#thc{
+    width: 17.5vw;
+    height: 17.5vw;
+    background-color: #E5EEE4;;
+    border-radius: 50%;
+    left: 50%;
+    top: 80%;
+}
+#cursor{
+    display: none;
+}
+#oc{
+      width: 17.5vw;
+    height: 17.5vw;
+    left: 30%;
+    top: 16%;
+}
+.jasmine-circle {
+    width: 17.5vw;
+    height: 17.5vw;
+    /* Wrapper ko wahan rakho jahan se movement SHURU honi hai */
+    left: 30%;
+    top: 14.72vh;
+
+}
+.information{
+    height: 60vh;
+    /* background-color: aqua; */
+}
+.poster {
+    width: 32vw;
+    position: absolute;
+    height: 40vw;
+    /* background-color: red; */
+    z-index: 4;
+   top: 10vh;
+   left: 20vw;
+    /* background-image: url(./res1kids/kids\ room\ desk\ corner.webp); */
+
+    background-position: center;
+    background-size: cover;
+}
+.poster-small {
+    width: 23vw;
+    height: 22vh;
+    /* background-color: red; */
+    position: absolute;
+    top: 25vh;
+    left: 1vh;
+    z-index: 4;
+    /* background-image: url(./res1livin/living8.webp); */
+    background-position: 30% 10%;
+    background-size: cover;
+}
+
+.detail-txt {
+
+    display: flex;
+    flex-direction: column;
+    font-family: montserrat;
+    position: absolute;
+    top: 8vh;
+    left: 37vh;
+    width: 30%;
+    z-index: 5;
+
+}
+
+.detail-txt h1 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 5vw;
+    letter-spacing: -2px;
+    color: #3C3C3C;
+    line-height: 9vw;
+    z-index: 5;
+
+}
+
+.detail-txt h1:nth-child(3) {
+    margin-top: 4.8vw;
+    margin-bottom: 1.5vw;
+}
+
+.style-txt-box {
+    width: 100vw;
+    height: 10vh;
+    background-color: transparent;
+    position: absolute;
+    top: 21vh;
+    overflow: hidden;
+    
+}
+.detail-txt p {
+    width: 50vw;
+    font-size: 2.8vw;
+    margin-left: 4px;
+    line-height: 3vw;
+    font-weight: 400;
+    z-index: 5;
+
+}
+.ribon-head {
+    width: 230vw;
+    height: 8vw;
+    position: absolute;
+    top: 0%;
+    left: -1%;
+    background-color: transparent;
+    border: 2px solid #CAB193;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    z-index: 11;
+    z-index: 5;
+
+}
+.showcase {
+    width: 100vw;
+    height: 500vh;
+    /* background-color: #e1f5e7; */
+    
+    /* margin-top: 66vh; */
+    position: relative;
+   
+
+}
+.first-block {
+    width: 45.5vw;
+    height: 35.5vw;
+    background-color: transparent;
+
+    position: absolute;
+    left: 40%;
+    top: 3%;
+    z-index: 12;
+
+}
+
+.second-block {
+    width: 58.8vw;
+    height: 35vw;
+    background-color: transparent;
+
+    position: absolute;
+    left: 10%;
+    top: 12%;
+    z-index: 12;
+
+}
+
+
+
+
+.third-block {
+    width: 59.8vw;
+    height: 48.5vw;
+    background-color: transparent;
+
+    position: absolute;
+    left: 35.7%;
+    top: 20%;
+    z-index: 12;
+
+}
+
+
+
+.fourth-block {
+    width: 44vw;
+    height: 57vw;
+    background-color: transparent;
+
+    position: absolute;
+    left: 9.5%;
+    top: 30%;
+    z-index: 12;
+
+}
+
+
+
+
+
+
+
+.fifth-block {
+    width: 55vw;
+    height: 45vw;
+    background-color: transparent;
+
+    position: absolute;
+    left: 43%;
+    top: 41%;
+    z-index: 12;
+
+}
+#p h1 {
+    font-family: jst;
+    font-size: 14vw;
+    font-weight: 400;
+    color: #3c3c3c2a;
+    position: absolute;
+    top: 2vh;
+    left: 10vw;
+    z-index: 11;
+
+}
+
+#roj h1 {
+    font-family: jst;
+    font-size: 13.5vw;
+    font-weight: 400;
+    color: #3c3c3c2a;
+
+    letter-spacing: -5px;
+    position: absolute;
+    top: 2vh;
+    left: 30vw;
+    z-index: 11;
+    opacity: 1;
+
+}
+
+#ect h1 {
+    font-family: jst;
+    font-size: 13.5vw;
+    font-weight: 400;
+    color: #3c3c3c2a;
+
+    letter-spacing: -4px;
+    position: absolute;
+    top: 2vh;
+    left: 50vw;
+    z-index: 11;
+
+
+
+}
+
+#s h1 {
+    font-family: jst;
+    font-size: 14.1vw;
+    font-weight: 390;
+    color: #3c3c3c2a;
+
+    position: absolute;
+    top: 2vh;
+    right: 10vw;
+    z-index: 11;
+
+}
+#projects {
+    position: absolute;
+    top: 283vh;
+    font-family: jst;
+    font-size: 5.1vw;
+    text-transform: uppercase;
+    left: -22%;
+}
+
+
+#projects2 {
+    position: absolute;
+    top: 283vh;
+    font-family: jst;
+    font-size: 5.1vw;
+    text-transform: uppercase;
+    right: -22%;
+
+}
+#view {
+    width: 15vw;
+    height: 15vw;
+    background-color:red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 0.5vw;
+    font-family: hvl;
+    position: absolute;
+    top: 280vh;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: -1;
+    opacity: 0;
+    cursor: pointer;
+}
+
+}
