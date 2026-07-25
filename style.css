@@ -19,7 +19,7 @@
 }
 
 @font-face {
-    font-family: jost;
+    font-family: jst;
     src: url(./fonts/Jost-Italic-VariableFont_wght.ttf);
 }
 
@@ -49,9 +49,17 @@ body {
 
 .circle-hub {
     width: 100%;
-    height: 620vh;
-    background-color: #F6F6F6;
-   
+    height: 690vh;
+    background: linear-gradient(
+        to bottom,
+        #F6F6F6 0vh,
+        #F6F6F6 100vh,
+        #F5EFE1 140vh,
+        #F5EFE1 190vh,
+        #EBF4EA 290vh,
+        #EBF4EA 100%
+    );
+
 }
 
 .content {
@@ -176,11 +184,18 @@ body {
     height: 100vh;
     background-color: transparent;
 }
+/* .info-layout-bg{
+    width: 100%;
+    height: 120vh;
+    background-color: red;
+} */
 
 .information {
     width: 100%;
     height: 120vh;
     /* background-color: green; */
+   /* background: linear-gradient(to bottom, #EBF4EA, #F6F6F6); */
+
     position: relative;
 }
 
@@ -485,12 +500,178 @@ body {
     background-position: center;
     background-size: cover;
 }
-.topmail{
+
+.topmail {
     display: block;
 }
 
-@media (max-width: 505px) {
-   
+.particleP {
+    font-family: jst;
+    font-size: 5vw;
+    font-weight: 400;
+    color: #3c3c3c2a;
+    position: absolute;
+    top: 68.05vh;
+    left: 10vw;
+    z-index: 11;
+}
+
+.particleP h1 {
+    font-weight: 400;
+}
+
+.particleROJ {
+    font-family: jst;
+    font-size: 5vw;
+    font-weight: 400;
+    color: #3c3c3c2a;
+    letter-spacing: -5px;
+    position: absolute;
+    top: 70vh;
+    left: 30vw;
+    z-index: 11;
+    opacity: 1;
+}
+
+.particleROJ h1 {
+    font-weight: 400;
+}
+
+.particleECT h1 {
+    font-weight: 400;
+}
+
+.particleS h1 {
+    font-weight: 400;
+}
+
+.particleECT {
+    font-family: jst;
+    font-size: 5vw;
+    font-weight: 400;
+    color: #3c3c3c2a;
+
+    letter-spacing: -5px;
+    position: absolute;
+    top: 92vh;
+    left: 50vw;
+    z-index: 11;
+}
+
+.particleS {
+    font-family: jst;
+    font-size: 5vw;
+    font-weight: 400;
+    color: #3c3c3c2a;
+
+    position: absolute;
+    top: 69vh;
+    left: 80vw;
+    z-index: 11;
+}
+
+.ects-text{
+    position: absolute;
+    top: 335vh;
+    font-family: jst;
+    font-size: 5.1vw;
+    text-transform: uppercase;
+    left: 0%;
+}
+.ects-text h1{
+    font-weight: 400;
+ 
+    color: #EBF4EA;
+
+    text-shadow:
+        -1px -1px 0 #B8C7B3,
+        1px -1px 0 #B8C7B3,
+        -1px 1px 0 #B8C7B3,
+        1px 1px 0 #B8C7B3;
+}
+
+.proj-text{
+    position: absolute;
+    top: 335vh;
+    font-family: jst;
+    font-size: 5.1vw;
+    text-transform: uppercase;
+    right: 0%;
+}
+
+.proj-text h1{
+    font-weight: 400;
+    /* -webkit-text-stroke: 1px #B8C7B3; */
+    color: #EBF4EA;
+    /* paint-order: stroke fill; */
+    text-shadow:
+        -1px -1px 0 #B8C7B3,
+        1px -1px 0 #B8C7B3,
+        -1px 1px 0 #B8C7B3,
+        1px 1px 0 #B8C7B3;
+}
+.click-btn-caption{
+    width: 100%;
+    height: 40vh;
+   /* background: linear-gradient(to bottom, #EBF4EA, #F6F6F6); */
+    position: absolute;
+    top: 360vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vw 20vw;
+
+}
+.click-btn{
+    width: 15VW;
+    height: 15VW;
+    background-color: #B8C7B3;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    z-index: 99;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: atl;
+    color: #3C3C3C;
+    font-size: 0.9vw;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+.click-btn:hover{
+   transform: translate(-50%,-50%) scale(1.1);
+}
+.click-btn-txt1{
+    
+    font-family: hvl;
+    font-size: 0.75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #3c3c3cb9;
+    letter-spacing: -1px;
+    opacity: 1;
+}
+.click-btn-txt2{
+    
+    font-family: hvl;
+    font-size: 0.75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #3c3c3cb9;
+    letter-spacing: -1px;
+    opacity: 1;
+}
+
+@media (max-width: 430px) {
+
 
     .hero-img-top {
         width: 33vw;
@@ -523,351 +704,373 @@ body {
         bottom: 0%;
         left: 2%;
     }
-    .tag{
+
+    .tag {
         width: 30vw;
         height: 9vh;
         top: 25%;
     }
+
     #ntxt {
-    
-    
-    font-size: 4.2vw;
-    display: inline-block;
-    position: absolute;
-    left: 11%;
-    top: 43%;
-}
 
-#ntxt h1 {
-    font-weight: 400;
-    letter-spacing: 0px;
-    color: #3C3C3C;
-}
-#ntxt2 {
-  
 
-   
-    /* background-color: red; */
-   
-    position: absolute;
-    left: 11%;
-    top: 48%;
-    color: #3C3C3C;
+        font-size: 4.2vw;
+        display: inline-block;
+        position: absolute;
+        left: 11%;
+        top: 43%;
+    }
 
-}
-.grey-circle{
-    width: 17.5vw;
-    height: 17.5vw;
-    background-color: #EAEAEA;
-    border-radius: 50%;
-    left: 70%;
-    top: 100vw;
-}
-#tc{
-    width: 17.5vw;
-    height: 17.5vw;
-    background-color: #EAEAEA;
-    border-radius: 50%;
-    left: 70%;
-    top: 100vw;
-}
-.sage-circle{
-    width: 17.5vw;
-    height: 17.5vw;
-    background-color: #E5EEE4;;
-    border-radius: 50%;
-    left: 54vw;
-    top: 80vh;
-}
-#thc{
-    width: 17.5vw;
-    height: 17.5vw;
-    background-color: #E5EEE4;;
-    border-radius: 50%;
-    left: 50%;
-    top: 80%;
-}
-#cursor{
-    display: none;
-}
-#oc{
-      width: 17.5vw;
-    height: 17.5vw;
-    left: 30%;
-    top: 16%;
-}
-.jasmine-circle {
-    width: 17.5vw;
-    height: 17.5vw;
-    /* Wrapper ko wahan rakho jahan se movement SHURU honi hai */
-    left: 30%;
-    top: 14.72vh;
+    #ntxt h1 {
+        font-weight: 400;
+        letter-spacing: 0px;
+        color: #3C3C3C;
+    }
 
-}
-.information{
-    height: 60vh;
-    /* background-color: aqua; */
-}
-.poster {
-    width: 32vw;
-    position: absolute;
-    height: 40vw;
-    /* background-color: red; */
-    z-index: 4;
-   top: 10vh;
-   left: 20vw;
-    /* background-image: url(./res1kids/kids\ room\ desk\ corner.webp); */
-
-    background-position: center;
-    background-size: cover;
-}
-.poster-small {
-    width: 23vw;
-    height: 22vh;
-    /* background-color: red; */
-    position: absolute;
-    top: 25vh;
-    left: 1vh;
-    z-index: 4;
-    /* background-image: url(./res1livin/living8.webp); */
-    background-position: 30% 10%;
-    background-size: cover;
-}
-
-.detail-txt {
-
-    display: flex;
-    flex-direction: column;
-    font-family: montserrat;
-    position: absolute;
-    top: 8vh;
-    left: 37vh;
-    width: 30%;
-    z-index: 5;
-
-}
-
-.detail-txt h1 {
-    font-weight: 400;
-    text-transform: uppercase;
-    font-size: 5vw;
-    letter-spacing: -2px;
-    color: #3C3C3C;
-    line-height: 9vw;
-    z-index: 5;
-
-}
-
-.detail-txt h1:nth-child(3) {
-    margin-top: 4.8vw;
-    margin-bottom: 1.5vw;
-}
-
-.style-txt-box {
-    width: 100vw;
-    height: 10vh;
-    background-color: transparent;
-    position: absolute;
-    top: 21vh;
-    overflow: hidden;
-    
-}
-.detail-txt p {
-    width: 50vw;
-    font-size: 2.8vw;
-    margin-left: 4px;
-    line-height: 3vw;
-    font-weight: 400;
-    z-index: 5;
-
-}
-.ribon-head {
-    width: 230vw;
-    height: 8vw;
-    position: absolute;
-    top: 0%;
-    left: -1%;
-    background-color: transparent;
-    border: 2px solid #CAB193;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    z-index: 11;
-    z-index: 5;
-
-}
-.showcase {
-    width: 100vw;
-    height: 500vh;
-    /* background-color: #e1f5e7; */
-    
-    /* margin-top: 66vh; */
-    position: relative;
-   
-
-}
-.first-block {
-    width: 45.5vw;
-    height: 35.5vw;
-    background-color: transparent;
-
-    position: absolute;
-    left: 40%;
-    top: 3%;
-    z-index: 12;
-
-}
-
-.second-block {
-    width: 58.8vw;
-    height: 35vw;
-    background-color: transparent;
-
-    position: absolute;
-    left: 10%;
-    top: 12%;
-    z-index: 12;
-
-}
+    #ntxt2 {
 
 
 
+        /* background-color: red; */
 
-.third-block {
-    width: 59.8vw;
-    height: 48.5vw;
-    background-color: transparent;
+        position: absolute;
+        left: 11%;
+        top: 48%;
+        color: #3C3C3C;
 
-    position: absolute;
-    left: 35.7%;
-    top: 20%;
-    z-index: 12;
+    }
 
-}
+    .grey-circle {
+        width: 17.5vw;
+        height: 17.5vw;
+        background-color: #EAEAEA;
+        border-radius: 50%;
+        left: 70%;
+        top: 100vw;
+    }
+
+    #tc {
+        width: 17.5vw;
+        height: 17.5vw;
+        background-color: #EAEAEA;
+        border-radius: 50%;
+        left: 70%;
+        top: 100vw;
+    }
+
+    .sage-circle {
+        width: 17.5vw;
+        height: 17.5vw;
+        background-color: #E5EEE4;
+        ;
+        border-radius: 50%;
+        left: 54vw;
+        top: 80vh;
+    }
+
+    #thc {
+        width: 17.5vw;
+        height: 17.5vw;
+        background-color: #E5EEE4;
+        ;
+        border-radius: 50%;
+        left: 50%;
+        top: 80%;
+    }
+
+    #cursor {
+        display: none;
+    }
+
+    #oc {
+        width: 17.5vw;
+        height: 17.5vw;
+        left: 30%;
+        top: 16%;
+    }
+
+    .jasmine-circle {
+        width: 17.5vw;
+        height: 17.5vw;
+        /* Wrapper ko wahan rakho jahan se movement SHURU honi hai */
+        left: 30%;
+        top: 14.72vh;
+
+    }
+
+    .information {
+        height: 60vh;
+        /* background-color: aqua; */
+    }
+
+    .poster {
+        width: 32vw;
+        position: absolute;
+        height: 40vw;
+        /* background-color: red; */
+        z-index: 4;
+        top: 10vh;
+        left: 20vw;
+        /* background-image: url(./res1kids/kids\ room\ desk\ corner.webp); */
+
+        background-position: center;
+        background-size: cover;
+    }
+
+    .poster-small {
+        width: 23vw;
+        height: 22vh;
+        /* background-color: red; */
+        position: absolute;
+        top: 25vh;
+        left: 1vh;
+        z-index: 4;
+        /* background-image: url(./res1livin/living8.webp); */
+        background-position: 30% 10%;
+        background-size: cover;
+    }
+
+    .detail-txt {
+
+        display: flex;
+        flex-direction: column;
+        font-family: montserrat;
+        position: absolute;
+        top: 8vh;
+        left: 60%;
+        width: 30%;
+        z-index: 5;
+
+    }
+
+    .detail-txt h1 {
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 5vw;
+        letter-spacing: -2px;
+        color: #3C3C3C;
+        line-height: 9vw;
+        z-index: 5;
+
+    }
+
+    .detail-txt h1:nth-child(3) {
+        margin-top: 4.8vw;
+        margin-bottom: 1.5vw;
+    }
+
+    .style-txt-box {
+        width: 100vw;
+        height: 10vh;
+        background-color: transparent;
+        position: absolute;
+        top: 28%;
+        overflow: hidden;
+
+    }
+
+    .detail-txt p {
+        width: 35vw;
+        font-size: 2.8vw;
+        margin-left: 4px;
+        line-height: 3vw;
+        font-weight: 400;
+        z-index: 5;
+
+    }
+
+    .ribon-head {
+        width: 230vw;
+        height: 8vw;
+        position: absolute;
+        top: 0%;
+        left: -1%;
+        background-color: transparent;
+        border: 2px solid #CAB193;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        z-index: 11;
+        z-index: 5;
+
+    }
+
+    .showcase {
+        width: 100vw;
+        height: 500vh;
+        /* background-color: #e1f5e7; */
+
+        /* margin-top: 66vh; */
+        position: relative;
 
 
+    }
 
-.fourth-block {
-    width: 44vw;
-    height: 57vw;
-    background-color: transparent;
+    .first-block {
+        width: 51.5vw;
+        height: 46.5vw;
+        background-color: transparent;
 
-    position: absolute;
-    left: 9.5%;
-    top: 30%;
-    z-index: 12;
+        position: absolute;
+        left: 38%;
+        top: 3%;
+        z-index: 12;
 
-}
+    }
+
+    .second-block {
+        width: 63.8vw;
+        height: 43vw;
+        background-color: transparent;
+
+        position: absolute;
+        left: 10%;
+        top: 11%;
+        z-index: 12;
+
+    }
 
 
 
 
+    .third-block {
+        width: 60.8vw;
+        height: 56.5vw;
+        background-color: transparent;
+
+        position: absolute;
+        left: 35.7%;
+        top: 18%;
+        z-index: 12;
+
+    }
 
 
 
-.fifth-block {
-    width: 55vw;
-    height: 45vw;
-    background-color: transparent;
+    .fourth-block {
+        width: 50vw;
+        height: 73vw;
+        background-color: transparent;
 
-    position: absolute;
-    left: 43%;
-    top: 41%;
-    z-index: 12;
+        position: absolute;
+        left: 9.5%;
+        top: 26.5%;
+        z-index: 12;
 
-}
-#p h1 {
-    font-family: jst;
-    font-size: 14vw;
-    font-weight: 400;
-    color: #3c3c3c2a;
-    position: absolute;
-    top: 2vh;
-    left: 10vw;
-    z-index: 11;
-
-}
-
-#roj h1 {
-    font-family: jst;
-    font-size: 13.5vw;
-    font-weight: 400;
-    color: #3c3c3c2a;
-
-    letter-spacing: -5px;
-    position: absolute;
-    top: 2vh;
-    left: 30vw;
-    z-index: 11;
-    opacity: 1;
-
-}
-
-#ect h1 {
-    font-family: jst;
-    font-size: 13.5vw;
-    font-weight: 400;
-    color: #3c3c3c2a;
-
-    letter-spacing: -4px;
-    position: absolute;
-    top: 2vh;
-    left: 50vw;
-    z-index: 11;
+    }
 
 
 
-}
-
-#s h1 {
-    font-family: jst;
-    font-size: 14.1vw;
-    font-weight: 390;
-    color: #3c3c3c2a;
-
-    position: absolute;
-    top: 2vh;
-    right: 10vw;
-    z-index: 11;
-
-}
-#projects {
-    position: absolute;
-    top: 283vh;
-    font-family: jst;
-    font-size: 5.1vw;
-    text-transform: uppercase;
-    left: -22%;
-}
 
 
-#projects2 {
-    position: absolute;
-    top: 283vh;
-    font-family: jst;
-    font-size: 5.1vw;
-    text-transform: uppercase;
-    right: -22%;
 
-}
-#view {
-    width: 15vw;
-    height: 15vw;
-    background-color:red;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    font-size: 0.5vw;
-    font-family: hvl;
-    position: absolute;
-    top: 280vh;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    z-index: -1;
-    opacity: 0;
-    cursor: pointer;
-}
+
+    .fifth-block {
+        width: 55vw;
+        height: 48vw;
+        background-color: transparent;
+
+        position: absolute;
+        left: 43%;
+        top: 37%;
+        z-index: 12;
+
+    }
+
+    #p h1 {
+        font-family: jst;
+        font-size: 14vw;
+        font-weight: 400;
+        color: #3c3c3c2a;
+        position: absolute;
+        top: 2vh;
+        left: 10vw;
+        z-index: 11;
+
+    }
+
+    #roj h1 {
+        font-family: jst;
+        font-size: 13.5vw;
+        font-weight: 400;
+        color: #3c3c3c2a;
+
+        letter-spacing: -5px;
+        position: absolute;
+        top: 2vh;
+        left: 30vw;
+        z-index: 11;
+        opacity: 1;
+
+    }
+
+    #ect h1 {
+        font-family: jst;
+        font-size: 13.5vw;
+        font-weight: 400;
+        color: #3c3c3c2a;
+
+        letter-spacing: -4px;
+        position: absolute;
+        top: 2vh;
+        left: 50vw;
+        z-index: 11;
+
+
+
+    }
+
+    #s h1 {
+        font-family: jst;
+        font-size: 14.1vw;
+        font-weight: 390;
+        color: #3c3c3c2a;
+
+        position: absolute;
+        top: 2vh;
+        right: 10vw;
+        z-index: 11;
+
+    }
+
+    #projects {
+        position: absolute;
+        top: 283vh;
+        font-family: jst;
+        font-size: 5.1vw;
+        text-transform: uppercase;
+        left: -22%;
+    }
+
+
+    #projects2 {
+        position: absolute;
+        top: 283vh;
+        font-family: jst;
+        font-size: 5.1vw;
+        text-transform: uppercase;
+        right: -22%;
+
+    }
+
+    #view {
+        width: 15vw;
+        height: 15vw;
+        background-color: red;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 0.5vw;
+        font-family: hvl;
+        position: absolute;
+        top: 280vh;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        z-index: -1;
+        opacity: 0;
+        cursor: pointer;
+    }
 
 }

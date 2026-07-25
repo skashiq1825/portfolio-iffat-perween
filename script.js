@@ -1,45 +1,38 @@
+// Initialize Lenis
 const lenis = new Lenis();
 
-lenis.on('scroll', ScrollTrigger.update);
+// Use requestAnimationFrame to continuously update the scroll
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
 
-gsap.ticker.add((time) => {
-  lenis.raf(time * 1000);
-});
-gsap.ticker.lagSmoothing(0);
+requestAnimationFrame(raf);
 
-// if (window.matchMedia("(min-width: 900px)").matches) {
 
-    // Style injection
-    const style = document.createElement('style');
-    style.innerHTML = `
-    .jasmine-circle.fixed-center {
-        position: fixed !important;
-        top: 50% !important;
-        left: 50% !important;
-        pointer-events: auto;
-    }
-    .jasmine-circle.unpinned {
-        position: absolute !important;
-        /* Scroll position ke mutabiq jagah lock kar dega */
-    }
-    `;
-    document.head.appendChild(style);
+  
+    
+    
 
-    // TIMELINE ONE
-    var timelineone = gsap.timeline({
+  var timelineone = gsap.timeline({
         scrollTrigger: {
             trigger: ".hero-img-mid",
-            start: "top 13%",
+            start: "top 9%",
             end: "bottom 0%",
             scrub: true,
+            // markers: true,
+            // add callbacks to add/remove fixed class
             onUpdate: function(self) {
                 const jasmineCircle = document.querySelector('.jasmine-circle');
-                // Agar hum timelinefour ke aage nahi gaye hain tabhi fixed lagao
-                if (self.progress === 1 && !jasmineCircle.classList.contains('unpinned')) {
-                    jasmineCircle.classList.add('fixed-center');
-                } else if (self.progress < 1) {
-                    jasmineCircle.classList.remove('fixed-center');
-                    jasmineCircle.classList.remove('unpinned');
+                if (self.progress === 1) {
+                    if (!jasmineCircle.classList.contains('fixed-center')) {
+                        jasmineCircle.classList.add('fixed-center');
+                    }
+                } else {
+                    // Remove fixed position when not at the end
+                    if (jasmineCircle.classList.contains('fixed-center')) {
+                        jasmineCircle.classList.remove('fixed-center');
+                    }
                 }
             }
         }
@@ -65,6 +58,18 @@ gsap.ticker.lagSmoothing(0);
     }, "<");
     timelineone.to(".grey-circle", { opacity: 0 });
     timelineone.to(".sage-circle", { opacity: 0 }, "<");
+    const style = document.createElement('style');
+    style.innerHTML = `
+    .jasmine-circle.fixed-center {
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) scale(3.9) !important;
+        /* z-index: 1000; */
+        pointer-events: auto;
+    }
+    `;
+    document.head.appendChild(style);
 
     // TIMELINE TWO
     var timelinetwo = gsap.timeline({
@@ -79,15 +84,16 @@ gsap.ticker.lagSmoothing(0);
     timelinetwo.to(".poster", { scale: 1.4 }, "<");
     timelinetwo.to(".poster-small", { top: "20vh" }, "<");
 
-    gsap.to(".circle-hub", {
-        backgroundColor: "#F5EFE1",
-        scrollTrigger: {
-            trigger: ".detail-txt",
-            start: "top 30%",
-            end: "top 100%", 
-            scrub: 1,
-        }
-    });
+    // gsap.to(".circle-hub", {
+    //     backgroundColor: "#F5EFE1",
+    //     scrollTrigger: {
+    //         trigger: ".detail-txt",
+    //         start: "top 30%",
+    //         end: "top 100%", 
+    //         scrub: 1,
+            
+    //     }
+    // });
 
     gsap.to(".ribon", {
         left: "-50%",
@@ -103,48 +109,125 @@ gsap.ticker.lagSmoothing(0);
     var timelinethree = gsap.timeline({
         scrollTrigger: {
             trigger: ".ribon-head",
-            start: "top 35%",
+            start: "top 30%",
             end: "+=300",
             scrub: 1,
+            // markers:true
         }
     });
-    timelinethree.to(".circle-hub", { backgroundColor: "#EBF4EA" });
+    // timelinethree.to(".circle-hub", { backgroundColor: "#EBF4EA" });
     timelinethree.to(".jasmine-circle", { backgroundColor: "#E5EEE4" }, "<");
 
- // TIMELINE FOUR - (EXACT CENTER UNPIN FIX)
- var timelinefour = gsap.timeline({
+
+
+// Set up particle selectors as an array for group animation and movement
+
+gsap.to(".jasmine-circle", {
+    opacity: 0,
     scrollTrigger: {
         trigger: ".fifth-block",
-        start: "top 35%",
-        end: "+=300",
-        scrub: true,
-        markers: true,
-        onLeave: function() {
-            const jasmineCircle = document.querySelector('.jasmine-circle');
-            const rect = jasmineCircle.getBoundingClientRect();
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            // Absolute positioning par exact vertical pixel lock karo
-            jasmineCircle.style.top = (rect.top + scrollTop + (rect.height / 2)) + 'px';
-            jasmineCircle.style.left = '50%';
-            jasmineCircle.style.transform = 'translate(-50%, -50%) scale(2.2)';
-            
-            jasmineCircle.classList.remove('fixed-center');
-            jasmineCircle.classList.add('unpinned');
-        },
-        onEnterBack: function() {
-            // Jab user wapas upar aaye toh inline overrides saaf kar do
-            const jasmineCircle = document.querySelector('.jasmine-circle');
-            jasmineCircle.classList.remove('unpinned');
-            jasmineCircle.classList.add('fixed-center');
-            
-            jasmineCircle.style.top = '';
-            jasmineCircle.style.left = '';
-            jasmineCircle.style.transform = '';
-        }
+        scrub: 1
+    }
+});
+gsap.to(".click-btn", {
+    opacity: 1,
+    ease:"easein",
+    scrollTrigger: {
+        trigger: ".fifth-block",
+        scrub: 1,
+        start:"top -10%",
+        end:"top 70%",
+        // markers:true
+    }
+});
+gsap.from(".click-btn-txt1", {
+    opacity: 0,
+    y:30,
+    ease:"easein",
+    scrollTrigger: {
+        trigger: ".fifth-block",
+        scrub: 1,
+        start:"top -10%",
+        end:"top 70%",
+        // markers:true
+    }
+},"<0.2");
+gsap.from(".click-btn-txt2", {
+    opacity: 0,
+    y:30,
+    ease:"easein",
+    scrollTrigger: {
+        trigger: ".fifth-block",
+        scrub: 1,
+        start:"top -10%",
+        end:"top 70%",
+        // markers:true
+    }
+},"<");
+
+
+ScrollTrigger.matchMedia({
+    "(min-width: 169px)": function () {
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".second-block",
+                // scroller: "#main",
+                start: "top 75%",
+                end: "top -183%",
+                // markers:true,
+                scrub: 3
+            }
+        })
+            .to(".particleP", { top: "335vh", left: "32.5vw" }, "<")
+            .to(".particleROJ", { top: "335vh", left: "37vw" }, "<")
+
+            .to(".particleECT", { top: "335vh", left: "51vw" }, "<")
+            .to(".particleS", { top: "335vh", left: "66vw" }, "<");
     }
 });
 
-timelinefour.to(".jasmine-circle", {
-    scale: 2.2
+const golaShrinkTl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".fifth-block",
+        // scroller: "#main",
+        start: "top 20%",
+        preventOverlaps: true,
+        scrub: 1,
+        // markers:true
+    }
+});
+
+
+golaShrinkTl.to(".particleP h1", { color: "#3c3c3c" }, "<");
+golaShrinkTl.to(".particleROJ h1", { color: "#3c3c3c" }, "<");
+golaShrinkTl.to(".particleECT h1", { color: "#3c3c3c" }, "<");
+golaShrinkTl.to(".particleS h1", { color: "#3c3c3c" }, "<");
+
+
+
+gsap.from(".proj-text", {
+    opacity: 0,
+    y: 10,
+    ease:"ease",
+
+    scrollTrigger: {
+        trigger: ".fifth-block",
+
+        scrub: 1,
+        start: "top 20%",
+        end: "top 80%"
+    }
+});
+
+gsap.from(".ects-text", {
+    opacity: 0,
+    y: 10,
+    ease:"ease",
+    scrollTrigger: {
+        trigger: ".fifth-block",
+   
+        scrub: 1,
+        start: "top 0%",
+        end: "top 80%"
+    }
 });
