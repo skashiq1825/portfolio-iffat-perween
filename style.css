@@ -684,7 +684,7 @@ body {
 .card{
     width: 20vw;
     height: 30vw;
-    background-color: #CAB193;
+    background-color: #7070702d;
     position: absolute;
     left: 50%;
     top: 130%;
@@ -692,19 +692,17 @@ body {
     border-radius: 1vw;
     /* border: 2px solid rgba(128, 128, 128, 0.055); */
     overflow: hidden;
-    /* padding: 1vw; */
+    padding: 0.1vw;
     opacity: 0;
 
 
 
 }
-.first-card{
-    background-color: #b8cec8;
-}
+
 
 .second-card{
     /* background-color: #7e72af; */
-    background-color: #98b4a9;
+    /* background-color: #98b4a9; */
 
     rotate: -10deg;
     width: 20vw;
@@ -712,15 +710,11 @@ body {
 }
 
 .third-card{
-    background-color: #7c938a;
+    /* background-color: #7c938a; */
     rotate: -5deg;
 }
 
-.fourth-card{
-    /* background-color: #474747; */
-    background-color: #5b6762;
 
-}
 
 .card img {
     object-fit: cover;
