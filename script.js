@@ -288,14 +288,15 @@ reveal.to(thirdcard, {
 
 gsap.from(".moodboard-txt span", {
     opacity: 0,
-    y: -30,
+    y: -60,
     duration: 0.5,
     stagger: 0.1,
     scrollTrigger: {
         trigger: ".moodboard-txt",
         start: "top 40%",
-        end: "top 100%",
-        markers:true
+        end: "+=400",
+        markers:true,
+        scrub:true
         
     }
 });
