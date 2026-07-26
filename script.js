@@ -284,6 +284,18 @@ reveal.to(thirdcard, {
     ease: "easein"
 },"<0.1");
 
-
-
 })
+
+gsap.from(".moodboard-txt span", {
+    opacity: 0,
+    y: -30,
+    duration: 0.5,
+    stagger: 0.1,
+    scrollTrigger: {
+        trigger: ".moodboard-txt",
+        start: "top 40%",
+        end: "top 100%",
+        markers:true
+        
+    }
+});

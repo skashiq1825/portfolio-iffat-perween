@@ -724,7 +724,25 @@ body {
     border-radius: 0.8vw;
 }
 
-    
+.moodboard-txt{
+    width: 100%;
+    height: 20vh;
+    /* background-color: saddlebrown; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* font-family: montserrat; */
+    font-style: italic;
+    font-size: 5vw;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    color: #3C3C3C;
+    transform: translate(-50%,0%);
+}  
+.moodboard-txt span{
+    display:inline-block;
+}  
 
 
 @media (max-width: 430px) {
