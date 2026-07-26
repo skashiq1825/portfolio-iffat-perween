@@ -231,7 +231,7 @@ var behancetime = gsap.timeline({
         trigger: ".behance-sec",
         start: "top 40%",
         end: "top 100%",
-        markers: true
+        // markers: true
     }
 });
 
@@ -293,10 +293,68 @@ gsap.from(".moodboard-txt span", {
     // stagger: 0.1,
     scrollTrigger: {
         trigger: ".moodboard-txt",
-        start: "top 70%",
+        start: "top 60%",
         end: "+=400",
-        markers:true,
+        // markers:true,
         scrub:true
         
     }
+});
+
+var gototimeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".go-to-behance-box",
+        start: "top 60%",
+        end:"+=600",
+        markers: true,
+        scrub:1
+    }
+});
+gototimeline.to(".check-txt",{
+    left:"40%",
+    opacity:1,
+    transform: "translate(-50%,-50%)",
+    duration:1
+})
+gototimeline.from(".go-to-txt1 h1",{
+   y:-30,
+   opacity:0
+    
+},"<")
+gototimeline.to(".go-to-txt2 i",{
+    rotate:"0deg",
+    duration:3
+})
+
+gsap.to(".behance-logo", {
+    rotation: 360,
+    duration: 10,
+    repeat: -1,
+    ease: "none"
+});
+var behance = document.querySelector(".behance-logo");
+behance.addEventListener("mouseenter", () => {
+    gsap.to(behance, { scale: 1.2, duration: 0.3 });
+});
+
+behance.addEventListener("mouseleave", () => {
+    gsap.to(behance, { scale: 1, duration: 0.3 });
+});
+
+gsap.to(".packet", {
+    scrollTrigger: {
+        trigger: ".foot",
+        start: "top 60%",
+        end: "top 10%",
+        scrub: 1,
+        markers: true
+    },
+
+    width: "100vw",
+    height: "100%",
+    borderRadius: "0%",
+
+    transform: "translate(-50%, -50%)",
+    ease: "power2.out",
+    duration: 1
 });
