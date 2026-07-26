@@ -288,9 +288,9 @@ reveal.to(thirdcard, {
 
 gsap.from(".moodboard-txt span", {
     opacity: 0,
-    y: -60,
+    y: -100,
     duration: 0.5,
-    stagger: 0.1,
+    // stagger: 0.1,
     scrollTrigger: {
         trigger: ".moodboard-txt",
         start: "top 40%",
