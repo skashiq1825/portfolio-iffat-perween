@@ -205,29 +205,85 @@ golaShrinkTl.to(".particleS h1", { color: "#3c3c3c" }, "<");
 
 
 
-gsap.from(".proj-text", {
-    opacity: 0,
-    y: 10,
-    ease:"ease",
-
+const projEctsTl = gsap.timeline({
     scrollTrigger: {
         trigger: ".fifth-block",
-
-        scrub: 1,
-        start: "top 20%",
-        end: "top 80%"
-    }
-});
-
-gsap.from(".ects-text", {
-    opacity: 0,
-    y: 10,
-    ease:"ease",
-    scrollTrigger: {
-        trigger: ".fifth-block",
-   
         scrub: 1,
         start: "top 0%",
         end: "top 80%"
     }
 });
+
+projEctsTl.from(".proj-text", { 
+    opacity: 0, 
+    x: 100, 
+    ease: "ease", 
+}, "proj")
+.from(".ects-text", { 
+    opacity: 0, 
+    x: -100, 
+    ease: "ease", 
+}, "proj");
+
+
+var behancetime = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".behance-sec",
+        start: "top 40%",
+        end: "top 100%",
+        markers: true
+    }
+});
+
+behancetime.to(".card", {
+    top: "10%",
+    opacity:1,
+    duration: 0.3,
+    stagger: 0.1
+});
+behancetime.to(".first-card", {
+    width: "20vw",
+    height:"30vw",
+    duration: 0.3,
+    stagger: 0.2
+},"<");
+
+var firstcard = document.querySelector(".first-card");
+var secondcard = document.querySelector(".second-card");
+var thirdcard = document.querySelector(".third-card");
+var fourthcard = document.querySelector(".fourth-card");
+
+fourthcard.addEventListener("mouseenter",function(){
+var reveal = gsap.timeline();
+// Set equal left gap between all cards
+const leftGap = 24; // percent, about evenly between 3% and 77% for 4 cards
+
+reveal.to(firstcard, {
+    left: "3%",
+    transform: "translate(0%, 0%)",
+    duration: 0.5,
+    ease: "easein"
+});
+
+reveal.to(secondcard, {
+    left: `${3 + leftGap}%`,
+    transform: "translate(0%, 0%)",
+    duration: 0.5,
+    ease: "easein"
+},"<0.1");
+reveal.to(fourthcard, {
+    left: `${3 + leftGap * 3}%`,
+    transform: "translate(0%, 0%)",
+    duration: 0.5,
+    ease: "easein"
+},"<");
+reveal.to(thirdcard, {
+    left: `${3 + leftGap * 2}%`,
+    transform: "translate(0%, 0%)",
+    duration: 0.5,
+    ease: "easein"
+},"<0.1");
+
+
+
+})

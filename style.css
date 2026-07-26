@@ -49,15 +49,17 @@ body {
 
 .circle-hub {
     width: 100%;
-    height: 690vh;
+    height: 900vh;
     background: linear-gradient(
         to bottom,
         #F6F6F6 0vh,
-        #F6F6F6 100vh,
-        #F5EFE1 140vh,
-        #F5EFE1 190vh,
-        #EBF4EA 290vh,
-        #EBF4EA 100%
+        #F6F6F6 90vh,
+        #F5EFE1 150vh,
+        #F5EFE1 180vh,
+        #EBF4EA 310vh,
+        #EBF4EA 620vh,
+        #F6F6F6 800vh,
+        #F6F6F6 100%
     );
 
 }
@@ -670,6 +672,67 @@ body {
     opacity: 1;
 }
 
+.behance-sec{
+    width: 100%;
+    height: 130vh;
+    /* background-color: red; */
+    position: absolute;
+    top: 620vh;
+    overflow: hidden;
+    
+}
+.card{
+    width: 20vw;
+    height: 30vw;
+    background-color: #CAB193;
+    position: absolute;
+    left: 50%;
+    top: 130%;
+    transform: translate(-50%,0%);
+    border-radius: 1vw;
+    /* border: 2px solid rgba(128, 128, 128, 0.055); */
+    overflow: hidden;
+    /* padding: 1vw; */
+    opacity: 0;
+
+
+
+}
+.first-card{
+    background-color: #b8cec8;
+}
+
+.second-card{
+    /* background-color: #7e72af; */
+    background-color: #98b4a9;
+
+    rotate: -10deg;
+    width: 20vw;
+    height: 30vw;
+}
+
+.third-card{
+    background-color: #7c938a;
+    rotate: -5deg;
+}
+
+.fourth-card{
+    /* background-color: #474747; */
+    background-color: #5b6762;
+
+}
+
+.card img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.8vw;
+}
+
+    
+
+
 @media (max-width: 430px) {
 
 
@@ -768,27 +831,7 @@ body {
         top: 80vh;
     }
 
-    #thc {
-        width: 17.5vw;
-        height: 17.5vw;
-        background-color: #E5EEE4;
-        ;
-        border-radius: 50%;
-        left: 50%;
-        top: 80%;
-    }
-
-    #cursor {
-        display: none;
-    }
-
-    #oc {
-        width: 17.5vw;
-        height: 17.5vw;
-        left: 30%;
-        top: 16%;
-    }
-
+ 
     .jasmine-circle {
         width: 17.5vw;
         height: 17.5vw;
