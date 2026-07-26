@@ -19,7 +19,7 @@ requestAnimationFrame(raf);
             trigger: ".hero-img-mid",
             start: "top 9%",
             end: "bottom 0%",
-            scrub: true,
+            scrub: 1,
             // markers: true,
             // add callbacks to add/remove fixed class
             onUpdate: function(self) {
@@ -304,20 +304,20 @@ gsap.from(".moodboard-txt span", {
 var gototimeline = gsap.timeline({
     scrollTrigger: {
         trigger: ".go-to-behance-box",
-        start: "top 60%",
-        end:"+=600",
-        markers: true,
-        scrub:1
+        start: "top 70%",
+        end:"+=300",
+        // markers: true,
+        scrub:5
     }
 });
 gototimeline.to(".check-txt",{
-    left:"40%",
+    left:"50%",
     opacity:1,
     transform: "translate(-50%,-50%)",
     duration:1
 })
 gototimeline.from(".go-to-txt1 h1",{
-   y:-30,
+   y:30,
    opacity:0
     
 },"<")
@@ -341,20 +341,39 @@ behance.addEventListener("mouseleave", () => {
     gsap.to(behance, { scale: 1, duration: 0.3 });
 });
 
-gsap.to(".packet", {
+behance.addEventListener("click", () => {
+    window.open("https://www.behance.net/veyrainterior", "_blank");
+});
+
+
+var packettimeline = gsap.timeline({
     scrollTrigger: {
         trigger: ".foot",
-        start: "top 60%",
+        start: "top 70%",
         end: "top 10%",
         scrub: 1,
-        markers: true
-    },
-
+        // markers: true
+    }
+});
+packettimeline.to(".packet", {
     width: "100vw",
     height: "100%",
     borderRadius: "0%",
-
     transform: "translate(-50%, -50%)",
     ease: "power2.out",
     duration: 1
 });
+packettimeline.from(".let", {
+    x: "-50vw",
+    opacity: 0,
+    transform: "translate(-50%, -50%)",
+    // ease: "power2.out",
+    duration: 3
+});
+packettimeline.from(".collab", {
+    x: "50vw",
+    opacity: 0,
+    transform: "translate(-50%, -50%)",
+    // ease: "power2.out",
+    duration: 3
+},"<");
