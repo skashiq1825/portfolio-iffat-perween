@@ -1571,7 +1571,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    /* transform: translate(-50%,-50%); */
+    transform: translate(-50%,-50%)!important;
     overflow: hidden;
     padding: 1vw 0vw 2vw 0vw;
 }
