@@ -99,6 +99,71 @@ if (window.matchMedia("(min-width: 1024px)").matches) {
     `;
     document.head.appendChild(style);
 
+    // Bhai, let's fix possible issues!
+
+    // 1. Use forward slashes for image paths in JavaScript.
+    // 2. Check oc/thc/revealTargets not null.
+    // 3. Defensive code to avoid uncaught errors.
+    // 4. Ensure NodeLists/Arrays are handled.
+
+    const oc = document.querySelector(".jasmine-view");
+    const thc = document.querySelector(".sage-view");
+
+    const revealTargets = document.querySelectorAll(".hero-img-top, .hero-img-mid, .hero-img-bot");
+
+    // Use FORWARD slashes, escape parens
+    const imagesOC = [
+        'assets/boho/bohorestaurant(10).jpeg',
+        'assets/boxroom/boxroom (1) reimagined (1).webp',
+        'assets/res1dining/dinig2.webp'
+    ];
+
+    const imagesTHC = [
+        'assets/res1bath/washroom(3).webp',
+        'assets/res1kitch/kitchen mint.webp',
+        'assets/res1livin/living10.webp'
+    ];
+
+    function triggerReveal(isEnter, imageList = []) {
+        // Defensive: check if targets exist
+        if (!revealTargets.length) return;
+        gsap.killTweensOf(revealTargets);
+
+        if (isEnter) {
+            revealTargets.forEach((div, index) => {
+                // Defensive: Check index in imageList
+                const imgUrl = imageList[index] || "";
+                div.style.setProperty('--reveal-img', imgUrl ? `url('${imgUrl}')` : 'none');
+            });
+
+            gsap.to(revealTargets, {
+                "--opacity-before": 1,
+                "--blur-after": "10px",
+                "--blur-before": "0px",
+                duration: 0.7,
+                overwrite: true
+            });
+        } else {
+            gsap.to(revealTargets, {
+                "--opacity-before": 0,
+                "--blur-after": "0px",
+                "--blur-before": "20px",
+                duration: 0.5,
+                overwrite: true
+            });
+        }
+    }
+
+    // Defensive: only attach event listeners if dom nodes exist
+    if (oc) {
+        oc.addEventListener("mouseenter", () => triggerReveal(true, imagesOC));
+        oc.addEventListener("mouseleave", () => triggerReveal(false));
+    }
+    if (thc) {
+        thc.addEventListener("mouseenter", () => triggerReveal(true, imagesTHC));
+        thc.addEventListener("mouseleave", () => triggerReveal(false));
+    }
+
     // TIMELINE TWO
     var timelinetwo = gsap.timeline({
         scrollTrigger: {

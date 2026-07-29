@@ -82,6 +82,7 @@ body {
     background-image: url(./assets/elements/upload-9790834f-513a-4aed-ab75-6be2fd012408.png);
     background-size: cover;
     background-position: center;
+    cursor: pointer;
 
 
 }
@@ -97,6 +98,8 @@ body {
     background-image: url(./assets/elements/grey\ gol.png);
     background-size: cover;
     background-position: center;
+    cursor: pointer;
+
 
 
 }
@@ -112,6 +115,8 @@ body {
     background-image: url(./assets/elements/Picsart_26-03-26_22-03-11-620.png);
     background-size: cover;
     background-position: center;
+    cursor: pointer;
+
 
 
 }
@@ -1059,6 +1064,121 @@ body {
     font-weight: 400;
     font-size: 2.2vw;
    }
+
+
+
+
+   .hero-img-top,
+   .hero-img-mid,
+   .hero-img-bot {
+       position: absolute;
+       overflow: hidden;
+   
+       --blur-after: 0px;
+       --blur-before: 20px;
+       --opacity-before: 0;
+       --reveal-img: none;
+   }
+   
+   .hero-img-top::after,
+   .hero-img-mid::after {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-position: center;
+       background-size: cover;
+   }
+   
+   .hero-img-top::after {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-position: 69% 0%;
+       background-size: cover;
+   }
+   
+   .hero-img-bot::after {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-position: 0% 30%;
+       background-size: cover;
+   }
+   
+   
+   .hero-img-mid::before {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-position: 40% 10%;
+       background-size: cover;
+   }
+   
+   .hero-img-bot::before {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-position: 0% 97%;
+       background-size: cover;
+   }
+   
+   .hero-img-top::before {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-position: 0% 5%;
+       background-size: cover;
+   }
+   
+   
+   
+   .hero-img-top::after {
+       background-image: url(./res1bed/Bedroom\(4\).webp);
+       filter: blur(var(--blur-after));
+       /* z-index: 1; */
+   }
+   
+   .hero-img-mid::after {
+       background-image: url(./res1kitch/kitchen\(6\).webp);
+       filter: blur(var(--blur-after));
+       /* z-index: 1; */
+   }
+   
+   .hero-img-bot::after {
+       background-image: url(proj.webp);
+       filter: blur(var(--blur-after));
+       /* z-index: 1; */
+   }
+   
+   .hero-img-top::before,
+  .hero-img-mid::before,
+   .hero-img-bot::before {
+       background-image: var(--reveal-img);
+       opacity: var(--opacity-before);
+       filter: blur(var(--blur-before));
+       /* z-index: 2; */
+   }
+
+
+
 @media (max-width: 500px) {
 
     #main{
