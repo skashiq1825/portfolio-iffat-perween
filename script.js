@@ -35,13 +35,43 @@ if (window.matchMedia("(min-width: 1024px)").matches) {
             }
         }
     });
+    var timelineoneview = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".hero-img-mid",
+            start: "top 9%",
+            end: "top 100%",
+            scrub: 1,
+            markers: true,
+        }
+    })
+        
+    timelineoneview.to(".jasmine-view", {
+        zIndex:-5
+     });
+     timelineoneview.to(".grey-view", {
+         zIndex:-5
+        
+     }, "<");
+     timelineoneview.to(".sage-view", {
+         zIndex:-5
+      
+     }, "<");
+    timelineoneview.to(".jasmine-view", {
+        opacity:0
+    },"<");
+    timelineoneview.to(".grey-view", {
+        opacity:0
+    }, "<");
+    timelineoneview.to(".sage-view", {
+        opacity:0
+    }, "<");
 
     timelineone.to(".jasmine-circle", {
         top: "110vh",
         left: "50vw",
         x: "-50%",
         scale: 3.9
-    });
+    },"<");
     timelineone.to(".grey-circle", {
         top: "110vh",
         left: "50vw",
@@ -391,6 +421,36 @@ if (window.matchMedia("(max-width: 550px)").matches) {
             }
         }
     });
+    var timelineoneview = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".hero-img-mid",
+            start: "top 43%",
+            end: "top 100%",
+            scrub: 3,
+        }
+        })
+
+    timelineoneview.to(".jasmine-view", {
+        zIndex:-5
+     });
+     timelineoneview.to(".grey-view", {
+         zIndex:-5
+        
+     }, "<");
+     timelineoneview.to(".sage-view", {
+         zIndex:-5
+      
+     }, "<");
+    timelineoneview.to(".jasmine-view", {
+        opacity:0
+    },"<");
+    timelineoneview.to(".grey-view", {
+        opacity:0
+    }, "<");
+    timelineoneview.to(".sage-view", {
+        opacity:0
+    }, "<");
+
 
     timelineone.to(".jasmine-circle", {
         top: "110vh",
@@ -586,7 +646,7 @@ let cardOrder = [...cardNodes];
 // CONFIG
 // ==========================================
 
-const swipeThreshold = 120;
+const swipeThreshold = 20;
 
 const rotationMultiplier = 0.2;
 const maxDragRotation = 15;
