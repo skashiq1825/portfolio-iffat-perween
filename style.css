@@ -920,6 +920,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+  
+    /* transform: translateX(-50%); */
     overflow: hidden;
     padding: 1vw 0vw 2vw 0vw;
 }
@@ -2008,3 +2010,19 @@ body {
  
 
 }
+
+@media (min-width: 1499px) and (min-height: 700px){
+
+    #main {
+        height:950vh;
+        background-color: #5cb34a;
+    }
+    .circle-hub {
+        height: 950vh;
+        background-color: yellow;
+    }   
+  
+    
+
+}
+

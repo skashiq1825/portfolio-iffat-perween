@@ -440,7 +440,7 @@ if (window.matchMedia("(min-width: 1024px)").matches) {
         width: "100vw",
         height: "100%",
         borderRadius: "0%",
-        transform: "translate(-50%, -50%)",
+        // transform: "translate(-50%, -100%)",
         ease: "power2.out",
         duration: 1
     });
