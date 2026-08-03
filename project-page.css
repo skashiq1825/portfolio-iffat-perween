@@ -1,0 +1,555 @@
+@font-face {
+    font-family: hvl;
+    src: url(./fonts/havelock.otf);
+}
+
+@font-face {
+    font-family: atl;
+    src: url(./fonts/attila.ttf);
+}
+
+@font-face {
+    font-family: dnc;
+    src: url(./fonts/DancingScript-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: rog;
+    src: url(./fonts/RougeScript-Regular.ttf);
+}
+
+@font-face {
+    font-family: jst;
+    src: url(./fonts/Jost-Italic-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+
+
+}
+/* html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+/* } */ */
+   
+
+
+#main{
+    background-color: #F6F6F6;
+    width: 100%;
+    height: 536vh;
+    position: relative;
+    
+
+
+}
+.nav{
+   width: 100%; 
+   height: 10vh;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0vw 2vw;
+   font-family: montserrat;
+   
+}
+.nav h4 {
+    font-weight:500;
+}
+#page1{
+    width: 100%;
+    height: 206vh;
+    position: absolute;
+    background-color: #F6F6F6;
+    top: 0%;
+    /* overflow: hidden; */
+}
+#page2{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(35, 144, 107);
+    position: absolute;
+    background-image: url(./assets/office/cabin-img-for-hero-sec.jpg.jpeg);
+    background-position: 10% 0%;
+    background-size: cover;
+    top: 103vh;
+}
+#page3{
+     width: 100%;
+    height: 200vh;
+    position: absolute;
+    top:336vh;
+    background-color: rgb(138, 165, 203);
+}
+.subhead{
+    width: 100%;
+    height: 30vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0vw; */
+    /* background-color: red; */
+    
+}
+.subhead h1{
+font-family: jst;
+font-size: 9.5vw;
+font-weight: 360;
+letter-spacing: 4px;
+}
+.first-showcase-block{
+    width: 100vw;
+    height: 65vh;
+    /* background-color: blue; */
+    padding: 0vw 2vw ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+
+
+}
+.first-showcase-elem{
+    width: 25%;
+    height: 100%;
+    /* background-color: green; */
+}
+.elem-img-first  {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    background-image: url(./assets/res1bed/Bedroom\(3\).webp);
+    background-position: 23% 0%;
+    background-size: cover;
+}
+
+.elem-img-second  {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    background-image: url(./assets/boho/bohorestaurant\(1\).webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.elem-img-third  {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    background-image: url(./assets/res1dining/dinig1.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.elem-img-fourth  {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    background-image: url(./assets/parlour/1756920966387.jpeg.jpg.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.elem-img-fifth  {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    background-image: url(./assets/office/reception.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.elem-img-sixth  {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    background-image: url(./assets/res1livin/living7.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.elem-detail {
+    width: 100%;
+    height: 10%;
+    background-color: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 80px;
+    color: #3C3C3C;
+}
+
+.elem-detail-next {
+    width: 100%;
+    height: 10%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.elem-detail h2 {
+    font-family: montserrat;
+    font-size: .8vw;
+    font-weight: 500;
+    margin-left: 3px;
+}
+
+.elem-detail h3 {
+    font-family: montserrat;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: .7vw;
+}
+
+.elem-detail-next h3 {
+    font-family: montserrat;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: .7vw;
+    color: #3C3C3C;
+}
+
+.second-showcase-elem{
+    width: 50%;
+    height: 100%;
+    /* background-color: green; */
+}
+.third-showcase-elem{
+    width: 25%;
+    height: 100%;
+    /* background-color: green; */
+}
+
+.second-showcase-block{
+    width: 100vw;
+    height: 65vh;
+    /* background-color: blue; */
+    padding: 0vw 2vw ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+    margin-top: 2vw;
+
+
+}
+
+.fourth-showcase-elem{
+    width: 35%;
+    height: 100%;
+    /* background-color: green; */
+}
+.fifth-showcase-elem{
+    width: 30%;
+    height: 100%;
+    /* background-color: green; */
+}
+.sixth-showcase-elem{
+    width: 35%;
+    height: 100%;
+    /* background-color: green; */
+}
+#layers{
+   width: 100vw; 
+   height: 100vh;
+   position: absolute;
+   top: 0%;
+   background-color:transparent;
+   z-index: 5;
+   display: flex;
+}
+#layer1{
+    width: 50vw;
+    height: 100vh;
+    background-color: #c6c4c4 ;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+#layer2{
+    width: 50vw;
+    height: 100vh;
+    background-color: #c6c4c4;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    
+}
+#layerlock{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    background-color: #3C3C3C;
+  position: absolute;
+top: 50%;
+left:50%;
+transform: translate(-50%,-50%);
+z-index: 6;
+display: flex;
+align-items: center;
+justify-content: center;
+    
+}
+#layerlockmain{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0%;
+    background-color:transparent;
+    z-index: 6;
+    background-color: transparent;
+}
+#layerlock h1{
+    font-family: jst;
+    font-size: 3vw;
+    font-weight: 300;
+    color: #EAEAEA;
+    overflow: hidden;
+}
+#cursor{
+    width: 1vw;
+    height: 1vw;
+    background-color: #3C3C3C;
+    border-radius: 50%;
+    position: absolute;
+    top: -10%;
+    z-index: 10;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+}
+
+@media (max-width: 500px) {
+
+    .nav{
+        height: 8vh;
+        /* background-color: red; */
+    }
+
+    .nav h4[topmail] {
+        display: none !important;
+    }
+    
+.nav h4 {
+    font-weight: 500;
+    font-size: clamp(0.5rem, 3.5vw, 1rem);
+}
+
+#page1{
+    width: 100%;
+    height: 216vh;
+    position: absolute;
+    background-color: #F6F6F6;
+    
+    top: 0%;
+    /* overflow: hidden; */
+}
+#page2{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(35, 144, 107);
+    position: absolute;
+    background-image: url(./assets/office/cabin-img-for-hero-sec.jpg.jpeg);
+    background-position: 10% 0%;
+    background-size: cover;
+    top: 108vh;
+}
+#page3{
+     width: 100%;
+    height: 200vh;
+    position: absolute;
+    top:336vh;
+    background-color: rgb(138, 165, 203);
+}
+.subhead{
+    width: 100%;
+    height: 10vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0vw; */
+    /* background-color: rgb(230, 163, 163); */
+    
+}
+.subhead h1{
+font-family: jst;
+font-size: 12vw;
+font-weight: 450;
+letter-spacing: 1px;
+}
+.first-showcase-block{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: blue; */
+    padding: 2vw 0vw ;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    gap: 2vw;
+
+
+}
+.first-showcase-elem{
+    width: 100%;
+    height: 25%;
+    /* background-color: green; */
+}
+.elem-img-first  {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    background-image: url(./assets/res1bed/Bedroom\(3\).webp);
+    background-position: 23% 0%;
+    background-size: cover;
+}
+
+.elem-img-second  {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    background-image: url(./assets/boho/bohorestaurant\(1\).webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.elem-img-third  {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    background-image: url(./assets/res1dining/dinig1.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.elem-img-fourth  {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    background-image: url(./assets/parlour/1756920966387.jpeg.jpg.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.elem-img-fifth  {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    background-image: url(./assets/office/reception.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.elem-img-sixth  {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    background-image: url(./assets/res1livin/living7.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.elem-detail {
+    width: 100%;
+    height: 10%;
+    background-color: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 80px;
+    color: #3C3C3C;
+}
+
+.elem-detail-next {
+    width: 100%;
+    height: 10%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.elem-detail h2 {
+    font-family: montserrat;
+    font-size: .8vw;
+    font-weight: 500;
+    margin-left: 3px;
+}
+
+.elem-detail h3 {
+    font-family: montserrat;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: .7vw;
+}
+
+.elem-detail-next h3 {
+    font-family: montserrat;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: .7vw;
+    color: #3C3C3C;
+}
+
+.second-showcase-elem{
+    width: 100%;
+    height: 50%;
+    /* background-color: green; */
+}
+.third-showcase-elem{
+    width: 100%;
+    height: 25%;
+    /* background-color: green; */
+}
+
+.second-showcase-block{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: blue; */
+    padding: 2vw 0vw ;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    gap: 2vw;
+    margin-top: 2vw;
+
+
+}
+
+.fourth-showcase-elem{
+    width: 100%;
+    height: 35%;
+    /* background-color: green; */
+}
+.fifth-showcase-elem{
+    width: 100%;
+    height: 30%;
+    /* background-color: green; */
+}
+.sixth-showcase-elem{
+    width: 100%;
+    height: 35%;
+    /* background-color: green; */
+}
+
+}
+

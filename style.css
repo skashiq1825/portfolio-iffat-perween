@@ -153,8 +153,8 @@ body {
     top: 0%;
     left: 18vw;
     background-size: cover;
-    background-position: 70% 0%;
-    background-image: url(./assets/res1bed/Bedroom\(4\).webp);
+    background-position: 57% 0%;
+    background-image: url(./assets/res1bed/bedroom-new-angle-res1.jpg.jpeg);
 }
 
 .hero-img-mid {
@@ -166,7 +166,7 @@ body {
     right: 1vw;
     background-size: cover;
     background-position: center;
-    background-image: url(./assets/res1kitch/kitchen\(6\).webp);
+    background-image: url(./assets/office/reception.webp);
 }
 
 .hero-img-bot {
@@ -177,8 +177,8 @@ body {
     bottom: 0%;
     left: 2vw;
     background-size: cover;
-    background-position: center;
-    background-image: url(./assets/parlour/proj.webp);
+    background-position: 0% 55%;
+    background-image: url(./assets/office/cabin-img-for-hero-sec.jpg.jpeg);
 }
 
 .tag {
@@ -1144,7 +1144,7 @@ body {
        left: 0;
        width: 100%;
        height: 100%;
-       background-position: 0% 5%;
+       background-position: center;
        background-size: cover;
    }
    
@@ -1926,7 +1926,7 @@ body {
 }
 
 
-@media (max-height: 700px) {
+@media (max-height: 690px) {
     #main {
         height:840vh;
     }

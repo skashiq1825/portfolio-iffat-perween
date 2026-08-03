@@ -113,9 +113,10 @@ if (window.matchMedia("(min-width: 1024px)").matches) {
 
     // Use FORWARD slashes, escape parens
     const imagesOC = [
-        'assets/boho/bohorestaurant(10).jpeg',
+        'assets/res1dining/dinig3.webp',
         'assets/boxroom/boxroom (1) reimagined (1).webp',
-        'assets/res1dining/dinig2.webp'
+        'assets/boho/bohorestaurant(10).jpeg',
+
     ];
 
     const imagesTHC = [
@@ -457,6 +458,12 @@ if (window.matchMedia("(min-width: 1024px)").matches) {
         // ease: "power2.out",
         duration: 3
     },"<");
+    var clickbtn = document.querySelector(".click-btn")
+    clickbtn.addEventListener("click", () => {
+        window.location.href = "./project-page.html";
+    });
+    
+
 }
 
 
