@@ -33,14 +33,19 @@ html,
 body {
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
+overflow-x: hidden;
 
 
 }
-/* html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
-/* } */ */
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
    
 
 
@@ -88,7 +93,7 @@ body::-webkit-scrollbar {
      width: 100%;
     height: 200vh;
     position: absolute;
-    top:336vh;
+    top:300vh;
     background-color: rgb(138, 165, 203);
 }
 .subhead{
@@ -265,34 +270,31 @@ letter-spacing: 4px;
     /* background-color: green; */
 }
 #layers{
-   width: 100vw; 
+   width: 100%; 
    height: 100vh;
-   position: absolute;
+   position: relative;
    top: 0%;
    background-color:transparent;
    z-index: 5;
    display: flex;
+   align-items: center;
+   justify-content: center;
 }
 #layer1{
-    width: 50vw;
-    height: 100vh;
+    width: 50%;
+    height: 100%;
     background-color: #c6c4c4 ;
-    position: absolute;
-    top: 0%;
-    left: 0%;
+  
 }
 #layer2{
-    width: 50vw;
-    height: 100vh;
+    width: 50%;
+    height: 100%;
     background-color: #c6c4c4;
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    
+
 }
 #layerlock{
-    width: 15vw;
-    height: 15vw;
+    width: 45vw;
+    height: 45vw;
     border-radius: 50%;
     background-color: #3C3C3C;
   position: absolute;
@@ -305,18 +307,10 @@ align-items: center;
 justify-content: center;
     
 }
-#layerlockmain{
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0%;
-    background-color:transparent;
-    z-index: 6;
-    background-color: transparent;
-}
+
 #layerlock h1{
     font-family: jst;
-    font-size: 3vw;
+    font-size: 9vw;
     font-weight: 300;
     color: #EAEAEA;
     overflow: hidden;
@@ -363,8 +357,8 @@ justify-content: center;
     height: 100vh;
     background-color: rgb(35, 144, 107);
     position: absolute;
-    background-image: url(./assets/office/cabin-img-for-hero-sec.jpg.jpeg);
-    background-position: 10% 0%;
+    background-image: url(assets/office/cabin-img-for-hero-sec.jpg.jpeg);
+    background-position: center;
     background-size: cover;
     top: 108vh;
 }
@@ -372,7 +366,7 @@ justify-content: center;
      width: 100%;
     height: 200vh;
     position: absolute;
-    top:336vh;
+    top:300vh;
     background-color: rgb(138, 165, 203);
 }
 .subhead{
@@ -396,7 +390,7 @@ letter-spacing: 1px;
     width: 100vw;
     height: 100vh;
     /* background-color: blue; */
-    padding: 2vw 0vw ;
+    padding: 2vw 0.5vw ;
     display: flex;
     flex-direction: column;
     align-items: space-between;
@@ -524,7 +518,7 @@ letter-spacing: 1px;
     width: 100vw;
     height: 100vh;
     /* background-color: blue; */
-    padding: 2vw 0vw ;
+    padding: 2vw 0.5vw ;
     display: flex;
     flex-direction: column;
     align-items: space-between;
@@ -538,17 +532,17 @@ letter-spacing: 1px;
 .fourth-showcase-elem{
     width: 100%;
     height: 35%;
-    /* background-color: green; */
+
 }
 .fifth-showcase-elem{
     width: 100%;
     height: 30%;
-    /* background-color: green; */
+
 }
 .sixth-showcase-elem{
     width: 100%;
     height: 35%;
-    /* background-color: green; */
+ 
 }
 
 }

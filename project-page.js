@@ -46,6 +46,13 @@ if (window.matchMedia("(min-width: 1024px)").matches) {
         zIndex: "-1"
 
     }, "<");
+
+// Lock the Lenis scroller (disable smooth scrolling) for the first 5 seconds
+lenis.stop();
+setTimeout(() => {
+    lenis.start();
+}, 2800);
+    
 }
 
 
@@ -55,12 +62,14 @@ gsap.to("#page2", {
     scrollTrigger: {
         trigger: "#page2",
         pin: "#page2",
+      
         start: "top 0%",
-        end: "top -200%",
+        end: "top -270%",
         // markers:true,
         // scrub:1
     }
-});
+})
+
 var layerfnc = gsap.timeline();
 
 layerfnc.to("#layerlock", {
@@ -90,6 +99,10 @@ layerfnc.to("#layerlockmain", {
 
 }
 
+lenis.stop();
+setTimeout(() => {
+    lenis.start();
+}, 2800);
 
 
 // linking projects..
