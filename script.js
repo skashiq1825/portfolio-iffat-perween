@@ -41,7 +41,7 @@ if (window.matchMedia("(min-width: 1024px)").matches) {
             start: "top 9%",
             end: "top 100%",
             scrub: 1,
-            markers: true,
+            // markers: true,
         }
     })
         
