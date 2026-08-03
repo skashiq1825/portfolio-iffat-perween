@@ -1501,4 +1501,10 @@ packettimeline.from(".collab", {
     duration: 3
 },"<");
 
+var clickbtn = document.querySelector(".click-btn")
+clickbtn.addEventListener("click", () => {
+    window.location.href = "./project-page.html";
+});
+
+
 }
